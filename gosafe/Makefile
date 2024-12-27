@@ -2,7 +2,8 @@ PROJECT_ROOT ?= .
 GOPATH=$(shell go env GOPATH)
 GO_BASE_CMD = GO111MODULE=on GOPROXY="https://proxy.golang.org,direct" go
 
-MODULES := gosafe
+.PHONY: all
+all: polish test
 
 .PHONY: init
 init:
@@ -16,9 +17,6 @@ init:
 
 .PHONY: polish
 polish: tidy fmt vet lint test
-	@for module in $(MODULES); do \
-		$(MAKE) -C $$module polish; \
-	done
 
 .PHONY: tidy
 tidy:
