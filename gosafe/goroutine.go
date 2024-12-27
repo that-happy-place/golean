@@ -1,7 +1,6 @@
 package gosafe
 
 import (
-	"fmt"
 	"sync"
 )
 
@@ -13,12 +12,7 @@ func Go(f func() error) <-chan error {
 
 	go func() {
 		defer wg.Done()
-		defer func() {
-			if r := recover(); r != nil {
-				errChan <- fmt.Errorf("panic: occurred in goroutine: %+v", r)
-			}
-		}()
-		errChan <- f()
+		errChan <- safe(f)()
 	}()
 
 	go func() {
