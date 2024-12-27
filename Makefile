@@ -16,7 +16,7 @@ init:
 	pre-commit install
 
 .PHONY: polish
-polish: tidy fmt vet lint
+polish: tidy fmt vet lint test
 
 .PHONY: tidy
 tidy:
