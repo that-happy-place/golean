@@ -8,6 +8,6 @@ Golean, a repo that allows you to go lean when you are setting up a new Go proje
 
 ## Inspiration for the name
 
-![joelene](.static/joelene.jpeg "Joelene")
+<img src=".static/joelene.jpeg" alt="Joelene" width="100px"/>
 
 This is Joelene. I originally wanted an Alpaca named Joelene, and my friend got me this. She is an Llama.
