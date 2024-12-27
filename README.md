@@ -4,7 +4,7 @@ Golean, a repo that allows you to go lean when you are setting up a new Go proje
 
 ## Sub-modules
 
-- [gosafe](./gosafe/README.md)
+- [gosafe](./gosafe/)
 
 ## Inspiration for the name
 
