@@ -1,7 +1,12 @@
-...
+name: auto-versioning
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  test-next-release:
+  release-next-version:
     runs-on: ubuntu-latest
 
     steps:
