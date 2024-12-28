@@ -28,5 +28,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.semver.outputs.patch }}
-          release_name: Release ${{ steps.semver.outputs.patch }}
+          tag_name: ${{ steps.semver.outputs.v_patch }}
+          release_name: Release ${{ steps.semver.outputs.v_patch }}
