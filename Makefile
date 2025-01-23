@@ -2,7 +2,7 @@ PROJECT_ROOT ?= .
 GOPATH=$(shell go env GOPATH)
 GO_BASE_CMD = GO111MODULE=on GOPROXY="https://proxy.golang.org,direct" go
 
-MODULES := gosafe collections math batch
+MODULES := gosafe collections math
 
 .PHONY: init
 init:

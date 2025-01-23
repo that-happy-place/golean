@@ -7,7 +7,6 @@ Golean, a repo that allows you to go lean when you are setting up a new Go proje
 - [gosafe](./gosafe/)
 - [collections](./collections/)
 - [math](./math/)
-- [batch](./batch/)
 
 ## Inspiration for the name
 

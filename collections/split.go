@@ -1,6 +1,6 @@
-package batch
+package collections
 
-func Split[T any](array []T, batchSize uint32) [][]T {
+func SplitSlice[T any](array []T, batchSize uint32) [][]T {
 	if batchSize == 0 {
 		panic("batchSize cannot be 0")
 	}

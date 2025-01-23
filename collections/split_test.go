@@ -1,4 +1,4 @@
-package batch
+package collections
 
 import (
 	"reflect"
@@ -45,8 +45,8 @@ func TestSplit(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Split(tt.args.array, tt.args.batchSize); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Split() = %v, want %v", got, tt.want)
+			if got := SplitSlice(tt.args.array, tt.args.batchSize); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("SplitSlice() = %v, want %v", got, tt.want)
 			}
 		})
 	}
