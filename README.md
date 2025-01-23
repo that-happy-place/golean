@@ -5,6 +5,8 @@ Golean, a repo that allows you to go lean when you are setting up a new Go proje
 ## Sub-modules
 
 - [gosafe](./gosafe/)
+- [collections](./collections/)
+- [math](./math/)
 
 ## Inspiration for the name
 
