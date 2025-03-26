@@ -1,0 +1,18 @@
+name: autoupdate
+on:
+  push:
+    branches:
+      - master
+jobs:
+  autoupdate:
+    name: autoupdate
+    runs-on: ubuntu-22.04
+    steps:
+      - name: update master
+        uses: docker://chinthakagodawita/autoupdate-action:v1
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      - name: add label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: "auto-updated"
