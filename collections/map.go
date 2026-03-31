@@ -2,11 +2,10 @@ package collections
 
 type Map[K comparable, V any] map[K]V
 
-func (m Map[K, V]) Map(mapper func(k K, v V) (K, V)) Map[K, V] {
-	newMap := make(map[K]V)
-	if len(m) == 0 {
-		return newMap
-	}
+// MapToMap acts as a standalone transformer since methods cannot introduce new generics.
+func MapToMap[K comparable, V any, K2 comparable, V2 any](m map[K]V, mapper func(K, V) (K2, V2),
+) map[K2]V2 {
+	newMap := make(map[K2]V2)
 	for k, v := range m {
 		newK, newV := mapper(k, v)
 		newMap[newK] = newV

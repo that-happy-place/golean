@@ -12,9 +12,9 @@ func TestMap_Map(t *testing.T) {
 	}
 	type testCase[K comparable, V any] struct {
 		name string
-		m    Map[K, V]
+		m    map[K]V
 		args args[K, V]
-		want Map[K, V]
+		want map[K]V
 	}
 	tests := []testCase[string, int]{
 		{
@@ -48,7 +48,7 @@ func TestMap_Map(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			assert.Equalf(t, tt.want, tt.m.Map(tt.args.mapper), "Map(%v)", tt.args.mapper)
+			assert.Equalf(t, tt.want, MapToMap(tt.m, tt.args.mapper), "MapTo(%v)", tt.args.mapper)
 		})
 	}
 }
